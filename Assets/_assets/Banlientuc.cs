@@ -31,17 +31,4 @@ public class Banlientuc : MonoBehaviour
     }
 }
     
-    // Update is called once per frame
-
-    //void Update()
-    //{
-    //    if (Input.GetMouseButton(0))
-    //    {
-    //        if(Time.time - lastBulletTime > shootingInterval)
-    //        {
-    //            ShootBullet();
-    //            lastBulletTime = Time.time;
-    //        }
-    //    }
-    //}
-
+  
