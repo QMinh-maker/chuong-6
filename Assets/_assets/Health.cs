@@ -7,7 +7,10 @@ public class Health : MonoBehaviour
     public GameObject explosionPrefab;
     public int defaultHealthPoint;
     private int healthPoint;
-    private void Start() => healthPoint = defaultHealthPoint;
+    private void Start()
+    {
+        healthPoint = defaultHealthPoint;
+    }
 
     public void TakeDamage(int damage)
     {
@@ -17,12 +20,26 @@ public class Health : MonoBehaviour
         if (healthPoint <= 0) Die();
     }
 
-    public void OnTriggerEnter2D(Collider2D collision) => Die();
+    public void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if (collision.CompareTag("Projectile"))
+        {
+            TakeDamage(1);
+            Destroy(collision.gameObject);
+        }
+        
+    }
+
 
     protected virtual void Die()
     {
         var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(explosion, 1);
+        if (gameObject.CompareTag("Player"))
+        {
+            FindObjectOfType<GameOverManager>().GameOver();
+        }
+
         Destroy(gameObject);
     }
 }
