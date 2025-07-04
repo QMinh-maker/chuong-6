@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameOverManager : MonoBehaviour
 {
     public static GameOverManager Instance;
-    public GameObject gameOverPanel;
+    
 
     private void Awake()
     {
@@ -14,11 +14,7 @@ public class GameOverManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    public void GameOver()
-    {
-        gameOverPanel.SetActive(true);
-    }
-
+   
     public void BackToMenu()
     {
         Time.timeScale = 1f;
