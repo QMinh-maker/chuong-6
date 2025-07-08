@@ -33,7 +33,7 @@ public class BattleFlow : MonoBehaviour
 
     private void Update()
     {
-        if (EnemyHealth.LivingEnemyCount<=0)
+        if (EnemyHealth.LivingEnemyCount<=0 && playerHealth != null)
         {
             OnGameWin();
         }
