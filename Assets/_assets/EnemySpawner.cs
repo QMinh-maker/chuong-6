@@ -3,34 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
-{
-
-    [System.Serializable]
-    public class EnemyWave 
-    {
-        public Transform enemyPrefab;
-        public int numberOfEnemy;
-        public Vector3 formationOffset;
-        public FlyPath flyPath;
-        public float speed;
-        public float nextWaveDelay;
-    }
+{  
     public EnemyWave[] enemyWaves;
     private int currentWave;
     void Start()
     {
         SpawnEnemyWave();
+        
     }
 
     // Update is called once per frame
     private void SpawnEnemyWave()
     {
-        var waveInfo = enemyWaves[currentWave];
+        var waveInfo = enemyWaves[currentWave];        
         var startPosition = waveInfo.flyPath[0];
-        
+
         for (int i = 0; i < waveInfo.numberOfEnemy; i++)
         {
             var enemy = Instantiate(waveInfo.enemyPrefab, startPosition, Quaternion.identity);
+            Debug.Log("spawn enemy");
             var agent = enemy.GetComponent<FlyPathAgent>();
             agent.flyPath = waveInfo.flyPath;
             agent.flySpeed = waveInfo.speed;
@@ -42,6 +33,6 @@ public class EnemySpawner : MonoBehaviour
         {
             Invoke(nameof(SpawnEnemyWave), waveInfo.nextWaveDelay);
         }
-
+        Debug.Log("game dang chay");
     }
 }
