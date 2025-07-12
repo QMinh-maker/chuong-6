@@ -528,9 +528,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1280240331523082, guid: 031faf5ef0ec4c34c86671fa3e2e81d1,
     type: 3}
-  defaultHealthPoint: 350
+  defaultHealthPoint: 300
   healthPoint: 0
   battleFlow: {fileID: 0}
+  enemyTag: Enemy
+  gameOverTimeScale: 0
 --- !u!114 &5717007249113876136
 MonoBehaviour:
   m_ObjectHideFlags: 0
