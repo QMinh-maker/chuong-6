@@ -8,7 +8,7 @@ using UnityEngine;
         {
          var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
          worldPoint.z = 0;
-         transform.position = worldPoint;
+        transform.position = new Vector3(worldPoint.x, worldPoint.y + 0.5f, 0);
         }
 }
 

@@ -18,13 +18,19 @@ public class Enemy : MonoBehaviour {
     public GameObject destructionVFX;
     public GameObject hitEffect;
     
-    [HideInInspector] public int shotChance; //probability of 'Enemy's' shooting during tha path
-    [HideInInspector] public float shotTimeMin, shotTimeMax; //max and min time for shooting from the beginning of the path
+    [HideInInspector] public int shotChance = 1000000; //probability of 'Enemy's' shooting during tha path
+    [HideInInspector] public float shotTimeMin = 0, shotTimeMax = 0.0001f; //max and min time for shooting from the beginning of the path
     #endregion
 
     private void Start()
     {
-        Invoke("ActivateShooting", Random.Range(shotTimeMin, shotTimeMax));
+        ScheduleNextShot();
+    }
+
+    private void ScheduleNextShot()
+    {
+        float delay = Random.Range(shotTimeMin, shotTimeMax);
+        Invoke(nameof(ActivateShooting), delay);
     }
 
     //coroutine making a shot
@@ -34,6 +40,7 @@ public class Enemy : MonoBehaviour {
         {                         
             Instantiate(Projectile,  gameObject.transform.position, Quaternion.identity);             
         }
+        ScheduleNextShot();
     }
 
     //method of getting damage for the 'Enemy'

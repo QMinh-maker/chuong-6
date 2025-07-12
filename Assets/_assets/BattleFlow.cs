@@ -5,12 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class BattleFlow : MonoBehaviour
 {
+    public static BattleFlow Instance { get; private set; }
+
     public GameObject gameOverUI;
     public GameObject gameWinUI;
     public PlayerHealth playerHealth;
     public GameObject bgMusic;
 
-
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);   
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void ReturnToMainMenu()
     {
@@ -30,20 +43,29 @@ public class BattleFlow : MonoBehaviour
         gameWinUI.SetActive(false);
         playerHealth.onDead += OnGameOver;
     }
-
-    private void Update()
+    public void ShowWin()
     {
-        if (EnemyHealth.LivingEnemyCount<=0 && playerHealth != null)
+        
+        if (!gameWinUI.activeSelf && !gameOverUI.activeSelf)
         {
-            OnGameWin();
+            gameWinUI.SetActive(true);
+            bgMusic.SetActive(false);
+            if (playerHealth != null) playerHealth.gameObject.SetActive(false);
         }
     }
-    private void OnGameWin()
-    {
-        gameWinUI.SetActive(true);
-        bgMusic.SetActive(false );
-        playerHealth.gameObject.SetActive(false);
-    }
+    //private void Update()
+    //{
+    //    if (EnemyHealth.LivingEnemyCount<=0 && playerHealth != null)
+    //    {
+    //        OnGameWin();
+    //    }
+    //}
+    //private void OnGameWin()
+    //{
+    //    gameWinUI.SetActive(true);
+    //    bgMusic.SetActive(false );
+    //    playerHealth.gameObject.SetActive(false);
+    //}
 
 }
 
