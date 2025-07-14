@@ -1,21 +1,23 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
-{  
+{
     public EnemyWave[] enemyWaves;
     private int currentWave;
+
     void Start()
     {
         SpawnEnemyWave();
-        
+
     }
 
-    // Update is called once per frame
+
     private void SpawnEnemyWave()
     {
-        var waveInfo = enemyWaves[currentWave];        
+
+        var waveInfo = enemyWaves[currentWave];
         var startPosition = waveInfo.flyPath[0];
 
         for (int i = 0; i < waveInfo.numberOfEnemy; i++)
@@ -36,3 +38,7 @@ public class EnemySpawner : MonoBehaviour
         Debug.Log("game dang chay");
     }
 }
+
+
+
+

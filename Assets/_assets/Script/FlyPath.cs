@@ -1,16 +1,19 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FlyPath : MonoBehaviour
 {
-    public WayPoint[] waypoints;
+    public  WayPoint[] waypoints;
+
     public Vector3 this[int index] => waypoints[index].transform.position;
 
     private void Reset()
     {
         waypoints = GetComponentsInChildren<WayPoint>();
     }
+
+
 
     private void OnDrawGizmos()
     {

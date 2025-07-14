@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +8,10 @@ public class FlyPathAgent : MonoBehaviour
     public float flySpeed;
     private int nextIndex = 1;
 
-  
+
     void Update()
     {
-        if (flyPath== null) return;
+        if (flyPath == null) return;
 
         if (nextIndex >= flyPath.waypoints.Length)
         {
@@ -19,7 +19,7 @@ public class FlyPathAgent : MonoBehaviour
             return;
         }
 
-        if(transform.position != flyPath[nextIndex])
+        if (transform.position != flyPath[nextIndex])
         {
             FlyToNextWayPoint();
             LookAt(flyPath[nextIndex]);
@@ -29,10 +29,9 @@ public class FlyPathAgent : MonoBehaviour
             nextIndex++;
         }
     }
-
     private void FlyToNextWayPoint()
     {
-        transform.position = Vector3.MoveTowards(transform.position, flyPath[nextIndex], 
+        transform.position = Vector3.MoveTowards(transform.position, flyPath[nextIndex],
             flySpeed * Time.deltaTime);
     }
 
@@ -43,8 +42,9 @@ public class FlyPathAgent : MonoBehaviour
 
         if (lookDirection.magnitude < 0.01f) return;
 
-        var angle = Vector2.SignedAngle(Vector3.down,lookDirection);
+        var angle = Vector2.SignedAngle(Vector3.down, lookDirection);
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
+
 
 }
