@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e73520e1b30740749aa90bbbc3f6402b, type: 3}
+  m_Name: WaveBoss
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 1060183425569205668, guid: 67741c7a31bdee041aa5d6ce12928ef4,
+    type: 3}
+  numberOfEnemy: 10
+  formationOffset: {x: 2, y: 2, z: 2}
+  flyPath: {fileID: 4056324797754695374, guid: 4b087ab2acb20cd48b4c48ea653ce6f1, type: 3}
+  speed: 5
+  nextWaveDelay: 0

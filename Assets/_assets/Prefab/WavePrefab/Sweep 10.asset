@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1060183425569205668, guid: 67741c7a31bdee041aa5d6ce12928ef4,
     type: 3}
   numberOfEnemy: 10
-  formationOffset: {x: 0, y: 0, z: 0}
+  formationOffset: {x: 2, y: 2, z: 2}
   flyPath: {fileID: 7810994562850986857, guid: 3bde064e2eddc8046a716e619c672914, type: 3}
-  speed: 7
-  nextWaveDelay: 10
+  speed: 5
+  nextWaveDelay: 20
