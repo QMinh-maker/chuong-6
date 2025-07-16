@@ -43,7 +43,7 @@ public class FlyPathAgent : MonoBehaviour
         if (lookDirection.magnitude < 0.01f) return;
 
         var angle = Vector2.SignedAngle(Vector3.down, lookDirection);
-        //transform.rotation = Quaternion.Euler(0, 0, angle);
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
 

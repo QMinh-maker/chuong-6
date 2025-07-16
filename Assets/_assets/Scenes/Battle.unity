@@ -1430,7 +1430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyWaves:
-  - {fileID: 11400000, guid: a326cf87cadc7d64c9e0b34521eaf439, type: 2}
+  - {fileID: 11400000, guid: f6d271bdaa2d95c448934ec4e96ec398, type: 2}
   - {fileID: 11400000, guid: 0bfeb4e9cf7acf34e8ffc72a3d096d76, type: 2}
   - {fileID: 11400000, guid: 5755f5cf5dc9c164b94b382c32b60514, type: 2}
   - {fileID: 11400000, guid: a21c44e54f7f38c4783f01cfae230ac1, type: 2}
@@ -1440,7 +1440,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 671b11690aac8ea4c905a794ab31bfc8, type: 2}
   - {fileID: 11400000, guid: f6d271bdaa2d95c448934ec4e96ec398, type: 2}
   - {fileID: 11400000, guid: 52075babf4fa13b448fb746bfb759471, type: 2}
-  - {fileID: 11400000, guid: a326cf87cadc7d64c9e0b34521eaf439, type: 2}
+  - {fileID: 11400000, guid: 52075babf4fa13b448fb746bfb759471, type: 2}
   - {fileID: 11400000, guid: 671b11690aac8ea4c905a794ab31bfc8, type: 2}
   - {fileID: 11400000, guid: a21c44e54f7f38c4783f01cfae230ac1, type: 2}
   - {fileID: 11400000, guid: 5755f5cf5dc9c164b94b382c32b60514, type: 2}

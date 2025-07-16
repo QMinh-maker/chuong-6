@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73520e1b30740749aa90bbbc3f6402b, type: 3}
   m_Name: WaveBoss
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 1060183425569205668, guid: 67741c7a31bdee041aa5d6ce12928ef4,
+  enemyPrefab: {fileID: 5596650025827106433, guid: f6c0df754d96dea4a8d375d05f4218e6,
     type: 3}
-  numberOfEnemy: 10
+  numberOfEnemy: 1
   formationOffset: {x: 2, y: 2, z: 2}
-  flyPath: {fileID: 4056324797754695374, guid: 4b087ab2acb20cd48b4c48ea653ce6f1, type: 3}
-  speed: 5
+  flyPath: {fileID: 3579714990291808015, guid: 014a048a589abf443a3161b65a76cd86, type: 3}
+  speed: 3
   nextWaveDelay: 0
