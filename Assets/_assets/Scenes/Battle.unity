@@ -1439,7 +1439,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a21c44e54f7f38c4783f01cfae230ac1, type: 2}
   - {fileID: 11400000, guid: 671b11690aac8ea4c905a794ab31bfc8, type: 2}
   - {fileID: 11400000, guid: f6d271bdaa2d95c448934ec4e96ec398, type: 2}
-  - {fileID: 11400000, guid: 52075babf4fa13b448fb746bfb759471, type: 2}
+  - {fileID: 11400000, guid: 0bfeb4e9cf7acf34e8ffc72a3d096d76, type: 2}
   - {fileID: 11400000, guid: 52075babf4fa13b448fb746bfb759471, type: 2}
   - {fileID: 11400000, guid: 671b11690aac8ea4c905a794ab31bfc8, type: 2}
   - {fileID: 11400000, guid: a21c44e54f7f38c4783f01cfae230ac1, type: 2}
@@ -2143,7 +2143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d416f5b922db8f4e99ba4c4a64897a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yOffset: 0.5
+  moveSpeed: 5
 --- !u!1 &1635497219
 GameObject:
   m_ObjectHideFlags: 0

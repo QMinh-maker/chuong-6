@@ -18,4 +18,4 @@ MonoBehaviour:
   formationOffset: {x: 2, y: 2, z: 2}
   flyPath: {fileID: 3579714990291808015, guid: 014a048a589abf443a3161b65a76cd86, type: 3}
   speed: 3
-  nextWaveDelay: 0
+  nextWaveDelay: 20
