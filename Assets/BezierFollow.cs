@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class BezierFollow : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private Transform[] routes;
+    private int routeToGo;
     void Start()
     {
         
